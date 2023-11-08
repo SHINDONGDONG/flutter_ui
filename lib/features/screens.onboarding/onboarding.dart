@@ -5,11 +5,8 @@ import 'package:flutter_ui_app/features/screens.onboarding/widgets/onboarding_ne
 import 'package:flutter_ui_app/features/screens.onboarding/widgets/onboarding_page.dart';
 import 'package:flutter_ui_app/features/screens.onboarding/widgets/onboarding_skip.dart';
 import 'package:flutter_ui_app/utils/constants/image_strings.dart';
-import 'package:flutter_ui_app/utils/constants/sizes.dart';
 import 'package:flutter_ui_app/utils/constants/text_strings.dart';
-import 'package:flutter_ui_app/utils/device/device_utility.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
