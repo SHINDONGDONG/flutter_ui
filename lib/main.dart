@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatelessWidget {
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: Scaffold(
-          appBar: AppBar(),
-          body: Center(
-            child: Image.asset(
-              "assets/icons/brands/acer_logo.png",
-            ),
-          ),
-        ));
+      themeMode: ThemeMode.system,
+      theme: ThemeData(textTheme: TextTheme()),
+      darkTheme: ThemeData(),
+    );
   }
 }
