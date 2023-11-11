@@ -5,13 +5,15 @@ import 'package:flutter_ui_app/features/authentication/screens/login/widgets/log
 import 'package:flutter_ui_app/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:flutter_ui_app/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:flutter_ui_app/utils/constants/sizes.dart';
+import 'package:flutter_ui_app/utils/constants/text_strings.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: TSpacingStyle.paddingWithAppBarHeight,
@@ -21,7 +23,9 @@ class LoginScreen extends StatelessWidget {
               TLoginHeader(),
               TLoginForm(),
               //divider
-              TLoginDivider(),
+              TLoginDivider(
+                dividerText: TTexts.orSignInWith.capitalize!,
+              ),
               //Footer
               SizedBox(height: TSizes.spaceBtwSections),
               TSocialButton(),
