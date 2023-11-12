@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_app/features/authentication/screens/login/login.dart';
 import 'package:flutter_ui_app/utils/constants/image_strings.dart';
 import 'package:flutter_ui_app/utils/constants/sizes.dart';
 import 'package:flutter_ui_app/utils/constants/text_strings.dart';
@@ -50,7 +51,7 @@ class ResetPassword extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.offAll(() => const LoginScreen()),
                   child: const Text(TTexts.done),
                 ),
               ),
