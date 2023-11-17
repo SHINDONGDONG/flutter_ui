@@ -21,22 +21,22 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             /// header --
-            const TPrimaryHeaderContainer(
+            TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   ///Appbar
-                  THomeAppBar(),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  const THomeAppBar(),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// Searchbar
-                  TSearchContainer(
+                  const TSearchContainer(
                     text: 'Search in Store',
                   ),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// Categories
                   Padding(
-                    padding: EdgeInsets.only(left: TSizes.defaultSpace),
+                    padding: const EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
                         /// -- Heading
@@ -44,11 +44,12 @@ class HomeScreen extends StatelessWidget {
                           title: 'Popular Categories',
                           showActionButton: false,
                           textColor: TColors.white,
+                          onPressed: () {},
                         ),
-                        SizedBox(height: TSizes.spaceBtwItems),
+                        const SizedBox(height: TSizes.spaceBtwItems),
 
                         /// --- Categories
-                        THomeCategories(),
+                        const THomeCategories(),
                       ],
                     ),
                   ),
@@ -72,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                   /// --Popular Products
                   TGridLayout(
                     itemCount: 4,
-                    itemBuilder: (BuildContext, int) {
+                    itemBuilder: (_, index) {
                       return const TProductCardVertical();
                     },
                   ),
