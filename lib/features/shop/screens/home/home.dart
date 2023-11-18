@@ -53,6 +53,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                  const SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
             ),
@@ -69,6 +70,7 @@ class HomeScreen extends StatelessWidget {
                       TImages.promoBanner3
                     ],
                   ),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// --Popular Products
                   TGridLayout(
