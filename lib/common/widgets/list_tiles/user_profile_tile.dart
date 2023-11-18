@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_app/common/widgets/images/t_circular_image.dart';
 import 'package:flutter_ui_app/utils/constants/colors.dart';
 import 'package:flutter_ui_app/utils/constants/image_strings.dart';
+import 'package:iconsax/iconsax.dart';
 
 class TUserProfileTile extends StatelessWidget {
   const TUserProfileTile({
     super.key,
+    this.onPressed,
   });
+
+  final VoidCallback? onPressed;
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -29,9 +33,9 @@ class TUserProfileTile extends StatelessWidget {
             Theme.of(context).textTheme.bodyMedium!.apply(color: TColors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: const Icon(
-          Icons.edit,
+          Iconsax.edit,
           color: TColors.white,
         ),
       ),

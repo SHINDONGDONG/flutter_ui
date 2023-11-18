@@ -4,8 +4,10 @@ import 'package:flutter_ui_app/common/widgets/custom_shpes/containers/primary_he
 import 'package:flutter_ui_app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:flutter_ui_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:flutter_ui_app/common/widgets/texts/section_heading.dart';
+import 'package:flutter_ui_app/features/personalization/screens/profile/profile.dart';
 import 'package:flutter_ui_app/utils/constants/colors.dart';
 import 'package:flutter_ui_app/utils/constants/sizes.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -33,7 +35,8 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   ///user profile card
-                  const TUserProfileTile(),
+                  TUserProfileTile(
+                      onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),
