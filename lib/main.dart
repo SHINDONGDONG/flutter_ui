@@ -11,7 +11,6 @@ class App extends StatelessWidget {
   const App({super.key});
   //TODO: add Widgets Binding
   //TODO: Init Local Storage
-  //TODO: Await Native Slash
   //TODO: Init Firebase
   //TODO: Init Auth
 
