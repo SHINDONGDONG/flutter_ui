@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_app/common/widgets/appbar/appbar.dart';
-import 'package:flutter_ui_app/common/widgets/products/cart/add_remove_button.dart';
-import 'package:flutter_ui_app/common/widgets/products/cart/cart_item.dart';
-import 'package:flutter_ui_app/common/widgets/texts/product_price_text.dart';
+import 'package:flutter_ui_app/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:flutter_ui_app/features/shop/screens/checkout/checkout.dart';
 import 'package:flutter_ui_app/utils/constants/sizes.dart';
+import 'package:get/get.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -18,41 +18,19 @@ class CartScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(
+      body: const Padding(
+        padding: EdgeInsets.all(
           TSizes.defaultSpace,
         ),
-        child: ListView.separated(
-          shrinkWrap: true,
-          itemCount: 10,
-          separatorBuilder: (_, __) =>
-              const SizedBox(height: TSizes.spaceBtwSections),
-          itemBuilder: (_, index) => const Column(
-            children: [
-              TCartItem(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(width: 70),
-                      //Add Remove Buttons
-                      TProductQuantityWithAddRemoveButton(),
-                    ],
-                  ),
-                  TProductPriceText(price: '255'),
-                ],
-              ),
-            ],
-          ),
-        ),
+        child: TCartItems(),
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(
           TSizes.defaultSpace,
         ),
         child: ElevatedButton(
-            onPressed: () {}, child: const Text('Checkout \$256.0')),
+            onPressed: () => Get.to(() => const CheckoutScreen()),
+            child: const Text('Checkout \$256.0')),
       ),
     );
   }
