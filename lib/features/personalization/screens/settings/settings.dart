@@ -4,6 +4,7 @@ import 'package:flutter_ui_app/common/widgets/custom_shpes/containers/primary_he
 import 'package:flutter_ui_app/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:flutter_ui_app/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:flutter_ui_app/common/widgets/texts/section_heading.dart';
+import 'package:flutter_ui_app/features/personalization/screens/address/address.dart';
 import 'package:flutter_ui_app/features/personalization/screens/profile/profile.dart';
 import 'package:flutter_ui_app/utils/constants/colors.dart';
 import 'package:flutter_ui_app/utils/constants/sizes.dart';
@@ -54,10 +55,11 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                     icon: Iconsax.safe_home,
                     title: 'My Addresses',
                     subTitle: 'Set shopping delivery address',
+                    onTap: () => Get.to(() => const UserAddressScreen()),
                   ),
                   const TSettingsMenuTile(
                     icon: Iconsax.shopping_cart,
