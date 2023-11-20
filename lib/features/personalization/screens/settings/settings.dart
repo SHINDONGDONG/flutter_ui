@@ -6,6 +6,7 @@ import 'package:flutter_ui_app/common/widgets/list_tiles/user_profile_tile.dart'
 import 'package:flutter_ui_app/common/widgets/texts/section_heading.dart';
 import 'package:flutter_ui_app/features/personalization/screens/address/address.dart';
 import 'package:flutter_ui_app/features/personalization/screens/profile/profile.dart';
+import 'package:flutter_ui_app/features/shop/screens/order/order.dart';
 import 'package:flutter_ui_app/utils/constants/colors.dart';
 import 'package:flutter_ui_app/utils/constants/sizes.dart';
 import 'package:get/get.dart';
@@ -66,10 +67,11 @@ class SettingsScreen extends StatelessWidget {
                     title: 'My Cart',
                     subTitle: 'Add, remove products and move to checkout',
                   ),
-                  const TSettingsMenuTile(
+                  TSettingsMenuTile(
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subTitle: 'In-progress and Completed Orders',
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   const TSettingsMenuTile(
                     icon: Iconsax.bank,
