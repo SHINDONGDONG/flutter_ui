@@ -12,14 +12,14 @@ class AllBrandsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> items = [
-      'Nike',
-      'Adidas',
-      'Puma',
-      'Start',
-      'Mating',
-      'DC'
-    ];
+    // final List<String> items = [
+    //   'Nike',
+    //   'Adidas',
+    //   'Puma',
+    //   'Start',
+    //   'Mating',
+    //   'DC'
+    // ];
 
     return Scaffold(
       appBar: const TAppBar(
