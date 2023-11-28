@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_ui_app/bindings/general_bindings.dart';
 import 'package:flutter_ui_app/data/repositories/authentication_repository.dart';
 import 'package:flutter_ui_app/firebase_options.dart';
 import 'package:flutter_ui_app/utils/constants/colors.dart';
@@ -40,6 +41,7 @@ class App extends StatelessWidget {
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
+      initialBinding: GeneralBindings(),
       home: const Scaffold(
         backgroundColor: TColors.primary,
         body: Center(
